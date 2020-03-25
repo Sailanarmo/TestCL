@@ -10,8 +10,4 @@ mv TestCL/OpenCL/OpenCL-ICD-Loader/inc/CL/*.h OpenCL/include/CL
 
 cd OpenCL
 
-$Env:path+=";"
-$Env:path+=(Get-Item -Path ".\").FullName
-$Env:path+="\lib\x64"
-
-$env:path.split(';')
+$env:OCL_ROOT=(Get-Item -Path ".\").FullName
