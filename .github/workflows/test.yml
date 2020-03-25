@@ -28,8 +28,7 @@ jobs:
 
     - name: Run_Cmake
       working-directory: build
-      run: |
-        cmake .. -DOCL_ROOT:PATH="$env:OCL_ROOT"
+      run: $env:OCL_ROOT ; cmake .. -DOCL_ROOT:PATH="$env:OCL_ROOT"
 
     - name: Build
       working-directory: build
