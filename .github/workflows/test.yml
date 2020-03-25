@@ -23,10 +23,13 @@ jobs:
       shell: powershell
       run: mkdir build ; .\.WinSetup\winSetup.ps1
 
+    - name: Config OpenCL
+      run: .\.WinSetup\configOCL.ps1
+
     - name: Run_Cmake
       working-directory: build
       run: |
-        cmake .. -DOpenCL_LIBRARY:PATH="../OpenCL/lib/Release" -DOpenCL_INCLUDE_DIR:PATH="../OpenCL/OpenCL-ICD-Loader/inc"
+        cmake ..
 
     - name: Build
       working-directory: build
