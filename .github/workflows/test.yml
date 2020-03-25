@@ -26,9 +26,12 @@ jobs:
     - name: Config OpenCL
       run: .\.WinSetup\configOCL.ps1
 
+    - name: print OCLPATH
+      run: Get-ChildItem env:
+
     - name: Run_Cmake
       working-directory: build
-      run: $env:OCL_ROOT ; cmake .. -DOCL_ROOT:PATH="$env:OCL_ROOT"
+      run: cmake ..
 
     - name: Build
       working-directory: build
