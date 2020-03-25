@@ -10,4 +10,8 @@ mv TestCL/OpenCL/OpenCL-ICD-Loader/inc/CL/*.h OpenCL/include/CL
 
 cd OpenCL
 
-$env:OCL_ROOT=(Get-Item -Path ".\").FullName
+$Root=(Get-Item -Path ".\").FullName
+
+[System.Environment]::SetEnvironmentVariable('OCL_ROOT',Root,[System.EnvironmentVariableTarget]::Machine)
+
+$env:OCL_ROOT
