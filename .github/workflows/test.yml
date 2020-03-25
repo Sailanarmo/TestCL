@@ -27,7 +27,7 @@ jobs:
       run: .\.WinSetup\configOCL.ps1
 
     - name: print OCLPATH
-      run: Get-ChildItem env:
+      run: .\.WinSetup\temp.ps1
 
     - name: Run_Cmake
       working-directory: build
