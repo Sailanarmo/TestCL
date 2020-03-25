@@ -12,5 +12,6 @@ cd OpenCL
 
 $Env:path+=";"
 $Env:path+=(Get-Item -Path ".\").FullName
+$Env:path+="\lib\x64"
 
 $env:path.split(';')
