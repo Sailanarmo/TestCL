@@ -11,3 +11,5 @@ mv TestCL/OpenCL/OpenCL-ICD-Loader/inc/CL/*.h OpenCL/include/CL
 cd OpenCL
 
 $Env:OCL_ROOT=(Get-Item -Path ".\").FullName
+
+$env:path.split(';')
