@@ -12,4 +12,4 @@ cd OpenCL
 
 $Root=(Get-Item -Path ".\").FullName
 
-RunAs [System.Environment]::SetEnvironmentVariable('OCL_ROOT',$Root,[System.EnvironmentVariableTarget]::Machine)
+echo "::set-env name=OCL_ROOT::$Root"
